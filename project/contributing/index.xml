@@ -87,7 +87,7 @@
 &lt;h2 id="1-widget-architecture"&gt;
 	1. Widget Architecture
 &lt;/h2&gt;
-&lt;p&gt;Widgets are React components located &lt;a href="https://github.com/meshery/meshery/tree/master/ui/components/DashboardComponent/widgets"&gt;here&lt;/a&gt;:&lt;/p&gt;</description></item><item><title>Contributing to Meshery UI - Notification Center</title><link>/project/contributing/contributing-ui-notification-center/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/project/contributing/contributing-ui-notification-center/</guid><description>&lt;div class="prereqs"&gt;&lt;p&gt;&lt;strong style="font-size: 20px;"&gt;Prerequisite Reading&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Widgets are React components located &lt;a href="https://github.com/meshery/meshery/tree/master/ui/components/Dashboard/widgets"&gt;here&lt;/a&gt;:&lt;/p&gt;</description></item><item><title>Contributing to Meshery UI - Notification Center</title><link>/project/contributing/contributing-ui-notification-center/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/project/contributing/contributing-ui-notification-center/</guid><description>&lt;div class="prereqs"&gt;&lt;p&gt;&lt;strong style="font-size: 20px;"&gt;Prerequisite Reading&lt;/strong&gt;&lt;/p&gt;
  &lt;ol&gt;&lt;li&gt;&lt;a href="contributing-ui"&gt;Contributing to Meshery UI&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;
 &lt;/div&gt;
 &lt;h2 id="table-of-contents"&gt;
@@ -166,59 +166,30 @@ While this isn&amp;rsquo;t a necessary step, if you plan on doing anything more 
 &lt;/h4&gt;
 &lt;p&gt;At the core of this system are &lt;strong&gt;Meshery Models&lt;/strong&gt; — packages that define a specific type of infrastructure, application, or capability. These models include:&lt;/p&gt;</description></item><item><title>Contributing to Models Quick Start</title><link>/project/contributing/contributing-models-quick-start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/project/contributing/contributing-models-quick-start/</guid><description>&lt;p&gt;&lt;strong&gt;Models follow Meshery&amp;rsquo;s schema-driven development approach.&lt;/strong&gt; Model, Component, and Relationship definitions are validated against schemas in &lt;a href="https://github.com/meshery/schemas/tree/master/schemas/constructs/v1beta1/model"&gt;&lt;code&gt;Model schema&lt;/code&gt;&lt;/a&gt;. See &lt;a href="../../project/contributing/contributing-schemas/"&gt;Contributing to Schemas&lt;/a&gt; for details.&lt;/p&gt;
 &lt;p&gt;&lt;a href="../../concepts/logical/models/"&gt;Meshery Models&lt;/a&gt; are a way to represent the architecture of a system or application. Models are defined in JSON and can be used to visualize the components and relationships between them. This guide will walk you through the process of creating a new model.&lt;/p&gt;
-&lt;p&gt;&lt;a href="../../concepts/logical/components/"&gt;Meshery Components&lt;/a&gt; are the building blocks of a model. Each component represents a different part of the system or application. Components can be anything from a database to a microservice to a server. Relationships define how components interact with each other. For example, a database component might have a relationship with a microservice component that represents the microservice&amp;rsquo;s dependency on the database.&lt;/p&gt;</description></item><item><title>End-to-End Test Status</title><link>/project/contributing/test-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/project/contributing/test-status/</guid><description>&lt;p&gt;This page contains results of tests performed in the development of Meshery.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Resources:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;See &lt;a href="../../project/contributing/contributing-ui-tests/"&gt;Contributing to Meshery&amp;rsquo;s End-to-End Tests&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;See the &lt;a href="https://docs.google.com/spreadsheets/d/13Ir4gfaKoAX9r8qYjAFFl_U9ntke4X5ndREY1T7bnVs/edit?gid=0#gid=0"&gt;Meshery Test Plan&lt;/a&gt; for a list of test cases.&lt;/li&gt;
-&lt;li&gt;See the &lt;a href="../../installation/compatibility-matrix/"&gt;Compatibility Matrix&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;style&gt;
-/* General Table Styling */
-table {
- width: 100%;
- border-collapse: collapse;
-}
-
-th, td {
- border: 1px solid #333;
- padding: 8px;
- text-align: left;
-}
-
-.accordion-header {
- cursor: pointer;
- background-color: #444;
- color: white;
- font-weight: normal;
- text-align: center;
- font-size: 1rem;
-}
-
-.accordion-header:hover {
- background-color: #666;
-}
-
-.accordion-content {
- display: none;
- background-color: #222;
-}
-
-.accordion-content table {
- margin: 0;
- background-color: #333;
-}
-
-.accordion-content td {
- color: white;
- padding: 5px 10px;
-}
-&lt;/style&gt;
-&lt;h2 id="latest-e2e-test-report"&gt;
-	Latest E2E Test Report
-&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://github.com/meshery/meshery/actions/workflows/build-ui-and-server.yml?query=branch%3Amaster"&gt;🔗 View Build UI and Server Workflow&lt;/a&gt;&lt;/p&gt;</description></item><item><title>How to write MeshKit compatible errors</title><link>/project/contributing/contributing-error/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/project/contributing/contributing-error/</guid><description>&lt;p&gt;Meshery pervasively uses MeshKit as a golang and infrastructure management-specific library in all of its components. MeshKit helps populate error messages with a uniform and useful set of informative attributes.&lt;/p&gt;
-&lt;p&gt;To help with creating error codes, MeshKit contains a tool that analyzes, verifies and updates error codes in Meshery source code trees. It extracts error details into a file that can be used for publishing all error code references on the Meshery &lt;a href="../../reference/error-codes/"&gt;error codes reference page&lt;/a&gt;. The objective to create this was to avoid centralized handling of error codes and automating everything&lt;/p&gt;</description></item><item><title>Meshery CLI Style Guide</title><link>/project/contributing/contributing-cli-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/project/contributing/contributing-cli-guide/</guid><description>&lt;p&gt;These guidelines are a collection of principles and conventions that need to be followed while designing mesheryctl commands.&lt;/p&gt;
+&lt;p&gt;&lt;a href="../../concepts/logical/components/"&gt;Meshery Components&lt;/a&gt; are the building blocks of a model. Each component represents a different part of the system or application. Components can be anything from a database to a microservice to a server. Relationships define how components interact with each other. For example, a database component might have a relationship with a microservice component that represents the microservice&amp;rsquo;s dependency on the database.&lt;/p&gt;</description></item><item><title>How to write MeshKit compatible errors</title><link>/project/contributing/contributing-error/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/project/contributing/contributing-error/</guid><description>&lt;p&gt;Meshery pervasively uses MeshKit as a golang and infrastructure management-specific library in all of its components. MeshKit helps populate error messages with a uniform and useful set of informative attributes.&lt;/p&gt;
+&lt;p&gt;To help with creating error codes, MeshKit contains a tool that analyzes, verifies and updates error codes in Meshery source code trees. It extracts error details into a file that can be used for publishing all error code references on the Meshery &lt;a href="../../reference/error-codes/"&gt;error codes reference page&lt;/a&gt;. The objective to create this was to avoid centralized handling of error codes and automating everything&lt;/p&gt;</description></item><item><title>HTTP Error Response Contract</title><link>/project/contributing/error-contract/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/project/contributing/error-contract/</guid><description>&lt;h1 id="http-error-response-contract"&gt;
+	HTTP Error Response Contract
+&lt;/h1&gt;
+&lt;p&gt;Every non-2xx HTTP response from Meshery Server carries a JSON body with
+&lt;code&gt;Content-Type: application/json; charset=utf-8&lt;/code&gt;. Clients should parse the body
+as JSON before surfacing errors to users.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Migration status:&lt;/strong&gt; the JSON contract is enforced across the &lt;code&gt;./server&lt;/code&gt;
+Go module by a &lt;code&gt;forbidigo&lt;/code&gt; lint rule that blocks any new &lt;code&gt;http.Error&lt;/code&gt; call
+at CI time, configured in
+&lt;a href="https://github.com/meshery/meshery/blob/master/.github/.golangci.yml"&gt;&lt;code&gt;.github/.golangci.yml&lt;/code&gt;&lt;/a&gt;.
+The migration landed in PR
+&lt;a href="https://github.com/meshery/meshery/pull/18919"&gt;#18919&lt;/a&gt; and the lint guard
+was flipped from advisory to fully blocking in PR
+&lt;a href="https://github.com/meshery/meshery/pull/18927"&gt;#18927&lt;/a&gt;. Legitimate
+non-JSON responders are handled in one of three ways: a file-level allowlist
+in &lt;code&gt;.github/.golangci.yml&lt;/code&gt; for the Kubernetes healthz probe handler
+(&lt;code&gt;k8s_healthz_handler.go&lt;/code&gt;) and the static-asset UI handler
+(&lt;code&gt;ui_handler.go&lt;/code&gt;); SSE stream handlers (&lt;code&gt;events_streamer.go&lt;/code&gt;,
+&lt;code&gt;load_test_handler.go&lt;/code&gt;) that don&amp;rsquo;t call &lt;code&gt;http.Error&lt;/code&gt; at all (they emit
+error events through the active SSE writer instead); and binary/tar/YAML
+downloads and HTTP redirects, which use &lt;code&gt;w.Write&lt;/code&gt; or &lt;code&gt;http.Redirect&lt;/code&gt;
+rather than &lt;code&gt;http.Error&lt;/code&gt; and so are not governed by the lint rule.&lt;/p&gt;</description></item><item><title>Meshery CLI Style Guide</title><link>/project/contributing/contributing-cli-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/project/contributing/contributing-cli-guide/</guid><description>&lt;p&gt;These guidelines are a collection of principles and conventions that need to be followed while designing mesheryctl commands.&lt;/p&gt;
 &lt;h2 id="design-principles"&gt;
 	Design Principles
 &lt;/h2&gt;
