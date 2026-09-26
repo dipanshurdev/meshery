@@ -25,6 +25,7 @@ export const StyledMainContent = styled('main')(({ theme }) => ({
       ? theme.palette.background.elevatedComponents
       : theme.palette.background.hover,
   flex: 1,
+  minWidth: 0,
   padding: '48px 36px 24px',
   [theme.breakpoints.down('sm')]: {
     padding: '24px 10px 16px 10px',
@@ -35,6 +36,7 @@ export const StyledAppContent = styled('div', {
   shouldForwardProp: (prop) => prop !== 'isDrawerCollapsed' && prop !== 'canShowNav',
 })(({ theme, canShowNav, isDrawerCollapsed }) => ({
   flex: 1,
+  minWidth: 0,
   display: 'flex',
   flexDirection: 'column',
   position: 'relative',
