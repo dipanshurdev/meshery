@@ -130,7 +130,7 @@ const Dashboard = () => {
   };
 
   const [currentBreakPoint, setCurrentBreakpoint] = useState('lg');
-  const { selectedK8sContexts, k8sConfig } = useSelector((state) => state.ui);
+  const { selectedK8sContexts, k8sConfig, isDrawerCollapsed } = useSelector((state) => state.ui);
   const [isEditMode, setIsEditMode] = useState(false);
 
   useEffect(() => {
@@ -418,6 +418,7 @@ const Dashboard = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <Box sx={{ padding: 0, width: '100%' }}>
               <ResponsiveReactGridLayout
+                key={isDrawerCollapsed ? 'dashboard-grid-collapsed' : 'dashboard-grid-expanded'}
                 layouts={constrainedLayouts}
                 resizeHandles={availableHandles}
                 isResizable={isEditMode}
